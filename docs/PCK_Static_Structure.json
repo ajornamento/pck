@@ -1,0 +1,543 @@
+{
+  "site": {
+    "name": "팍스크리스티코리아",
+    "nameEn": "Pax Christi Korea",
+    "description": "정의에 기반을 둔 평화운동",
+    "url": "https://paxchristikorea.org",
+    "type": "static"
+  },
+
+  "design": {
+    "colors": {
+      "primary": {
+        "blue": "#2563EB",
+        "green": "#10B981"
+      },
+      "neutral": {
+        "white": "#FFFFFF",
+        "gray_50": "#F9FAFB",
+        "gray_100": "#F3F4F6",
+        "gray_200": "#E5E7EB",
+        "gray_300": "#D1D5DB",
+        "gray_600": "#4B5563",
+        "gray_900": "#111827",
+        "text_primary": "#333333",
+        "text_secondary": "#666666"
+      },
+      "semantic": {
+        "bg_section": "#E8F0F5",
+        "bg_card": "#FFFFFF",
+        "accent_blue": "#5BA3D0",
+        "table_header": "#556B7F"
+      }
+    },
+    "typography": {
+      "fontFamily": "'Noto Sans KR', sans-serif",
+      "sizes": {
+        "h1": { "size": "32px", "weight": 700 },
+        "h2": { "size": "24px", "weight": 600 },
+        "h3": { "size": "18px", "weight": 600 },
+        "body": { "size": "15px", "weight": 400 },
+        "small": { "size": "13px", "weight": 400 }
+      }
+    }
+  },
+
+  "navigation": {
+    "main": [
+      {
+        "label": "PCK소개",
+        "path": "/about/",
+        "submenu": [
+          { "label": "PCK는", "path": "/about/introduction.html" },
+          { "label": "창립선언문", "path": "/about/founding-declaration.html" },
+          { "label": "연혁", "path": "/about/history.html" }
+        ]
+      },
+      {
+        "label": "PCK활동",
+        "path": "/programs/",
+        "submenu": [
+          { "label": "사명선언", "path": "/programs/mission.html" },
+          { "label": "사업", "path": "/programs/programs.html" },
+          { "label": "활동내역", "path": "/programs/activities.html" }
+        ]
+      },
+      {
+        "label": "PCK뉴스",
+        "path": "/news/",
+        "submenu": [
+          { "label": "뉴스레터/언론소개", "path": "/news/newsletter.html" },
+          { "label": "공지사항", "path": "/news/announcements.html" },
+          { "label": "자료실", "path": "/news/resources.html" },
+          { "label": "갤러리", "path": "/news/gallery.html" }
+        ]
+      },
+      {
+        "label": "후원안내",
+        "path": "/support/donation.html"
+      },
+      {
+        "label": "오시는 길",
+        "path": "/contact/location.html"
+      },
+      {
+        "label": "English",
+        "path": "/en/",
+        "submenu": [
+          { "label": "Introduction", "path": "/en/introduction.html" },
+          { "label": "PaxChristi International", "path": "/en/international.html" }
+        ]
+      }
+    ]
+  },
+
+  "pages": [
+    {
+      "id": "home",
+      "title": "팍스크리스티코리아",
+      "path": "/index.html",
+      "layout": "home",
+      "sections": [
+        {
+          "type": "hero",
+          "bg": "#E8F0F5",
+          "textAlign": "center",
+          "content": {
+            "title": "정의에 기반을 둔 평화",
+            "subtitle": "팍스크리스티코리아와 함께합니다",
+            "ctas": [
+              { "text": "활동 보기", "link": "/programs/activities.html" },
+              { "text": "후원하기", "link": "/support/donation.html" }
+            ]
+          }
+        },
+        {
+          "type": "cardGrid",
+          "columns": [3],
+          "cards": [
+            {
+              "icon": "book",
+              "title": "PCK란?",
+              "content": "팍스크리스티코리아는 'Pax Christi International'과 보조를 맞춰 한국 현실에 부활하는 평화 운동을 펼치고 있습니다.",
+              "link": "/about/introduction.html"
+            },
+            {
+              "icon": "people",
+              "title": "활동",
+              "content": "평화운동, 교육, 옹호활동 등을 통해 정의로운 평화를 추구합니다.",
+              "link": "/programs/activities.html"
+            },
+            {
+              "icon": "heart",
+              "title": "후원",
+              "content": "우리의 평화운동을 지원해주세요. 모든 후원은 한반도 평화를 위해 사용됩니다.",
+              "link": "/support/donation.html"
+            }
+          ]
+        },
+        {
+          "type": "latestNews",
+          "title": "최신 소식",
+          "count": 3,
+          "dataSource": "announcements.json",
+          "link": "/news/announcements.html"
+        },
+        {
+          "type": "gallery",
+          "title": "활동 풍경",
+          "count": 3,
+          "images": [
+            { "src": "/images/gallery-001.jpg", "alt": "활동 사진 1" },
+            { "src": "/images/gallery-002.jpg", "alt": "활동 사진 2" },
+            { "src": "/images/gallery-003.jpg", "alt": "활동 사진 3" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "introduction",
+      "title": "PCK는",
+      "path": "/about/introduction.html",
+      "layout": "default",
+      "sections": [
+        {
+          "type": "hero",
+          "bg": "#E8F0F5",
+          "content": {
+            "title": "팍스크리스티코리아(Pax Christi Korea)는 'Pax Christi International'과 보조를 맞춰 한국 현실에 부활하는 평화 운동을 펼바하게 전개하고 있습니다."
+          }
+        },
+        {
+          "type": "cardGrid",
+          "columns": [2, 1],
+          "cards": [
+            { "title": "정의 진환", "content": "프란치스코 정신으로..." },
+            { "title": "평화 구축", "content": "정의로 정의에..." },
+            { "title": "평화 교육과 정보보급 지원", "content": "평화이들의 금액..." },
+            { "title": "비폭력 무인 조직", "content": "비폭력 방법을 통한..." },
+            { "title": "중고고 대화와 협력", "content": "반란의 평화..." },
+            { "title": "각국 옹호(Advocacy) 활동 정착", "content": "카리네이..." }
+          ]
+        },
+        {
+          "type": "richText",
+          "content": "PCK가 추구하는 평화의 정의에 대한 본문..."
+        }
+      ]
+    },
+
+    {
+      "id": "mission",
+      "title": "사명선언",
+      "path": "/programs/mission.html",
+      "layout": "default",
+      "sections": [
+        {
+          "type": "twoColumn",
+          "left": {
+            "title": "비전",
+            "type": "subtitle"
+          },
+          "right": {
+            "title": "정의에 기반을 둔 평화(Just Peace) 추구",
+            "content": "우리는 '정의에 기반을 둔 평화(Just Peace)'를 추구하고..."
+          }
+        },
+        {
+          "type": "richText",
+          "title": "사명",
+          "content": "한반도에서 가톨릭 신앙에 기반을 둔 평화운동과 실태적인 평화를 위해 노력합니다..."
+        }
+      ]
+    },
+
+    {
+      "id": "programs",
+      "title": "사업",
+      "path": "/programs/programs.html",
+      "layout": "default",
+      "sections": [
+        {
+          "type": "iconCardGrid",
+          "columns": [4],
+          "cards": [
+            { "icon": "book", "title": "정기적 활동" },
+            { "icon": "people-chart", "title": "자발적인 활동" },
+            { "icon": "presentation", "title": "문과위원회 활동" },
+            { "icon": "book-2", "title": "특별 활동" }
+          ]
+        },
+        {
+          "type": "richText",
+          "title": "정기적 활동",
+          "content": "평화의 날 념송(1월 1일)..."
+        },
+        {
+          "type": "richText",
+          "title": "문과위원회 소개",
+          "content": "현재 7개 문과 운영..."
+        }
+      ]
+    },
+
+    {
+      "id": "activities",
+      "title": "활동내역",
+      "path": "/programs/activities.html",
+      "layout": "default",
+      "type": "archive",
+      "dataSource": "activities.json",
+      "sections": [
+        {
+          "type": "timelineByYear",
+          "title": "활동내역",
+          "data": "activities.json"
+        }
+      ]
+    },
+
+    {
+      "id": "announcements",
+      "title": "공지사항",
+      "path": "/news/announcements.html",
+      "layout": "default",
+      "type": "blog",
+      "dataSource": "announcements.json",
+      "sections": [
+        {
+          "type": "postList",
+          "title": "공지사항",
+          "data": "announcements.json"
+        },
+        {
+          "type": "archiveNav",
+          "title": "연도별 보관",
+          "data": "announcements.json"
+        }
+      ]
+    },
+
+    {
+      "id": "resources",
+      "title": "자료실",
+      "path": "/news/resources.html",
+      "layout": "default",
+      "type": "download",
+      "dataSource": "resources.json",
+      "sections": [
+        {
+          "type": "categorizedDownloads",
+          "title": "자료실",
+          "data": "resources.json"
+        }
+      ]
+    },
+
+    {
+      "id": "newsletter",
+      "title": "뉴스레터",
+      "path": "/news/newsletter.html",
+      "layout": "default",
+      "sections": [
+        {
+          "type": "subscriptionForm",
+          "title": "뉴스레터 구독",
+          "description": "PCK의 소식을 정기적으로 받아보세요",
+          "formAction": "https://formspree.io/f/YOUR_FORM_ID"
+        },
+        {
+          "type": "newsletterArchive",
+          "title": "뉴스레터 아카이브",
+          "dataSource": "newsletter.json"
+        }
+      ]
+    },
+
+    {
+      "id": "press",
+      "title": "언론보도",
+      "path": "/news/press.html",
+      "layout": "default",
+      "dataSource": "press.json",
+      "sections": [
+        {
+          "type": "pressList",
+          "title": "언론 보도",
+          "data": "press.json"
+        }
+      ]
+    },
+
+    {
+      "id": "gallery",
+      "title": "갤러리",
+      "path": "/news/gallery.html",
+      "layout": "default",
+      "sections": [
+        {
+          "type": "imageGrid",
+          "columns": [2],
+          "images": [
+            { "src": "/images/gallery-001.jpg", "alt": "활동 사진 1" },
+            { "src": "/images/gallery-002.jpg", "alt": "활동 사진 2" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "donation",
+      "title": "후원안내",
+      "path": "/support/donation.html",
+      "layout": "default",
+      "sections": [
+        {
+          "type": "sectionHeader",
+          "title": "후원안내"
+        },
+        {
+          "type": "threeColumn",
+          "columns": [
+            {
+              "title": "팍스크리스티코리아는",
+              "content": "가톨릭교의 모든 구성원이 동동하게 참여하는 국제기구평화운동 단체입니다."
+            },
+            {
+              "title": "우리의 사명",
+              "content": "우리는 모든 족속에 빠더하여 정의로운 평화(Just Peace)에 기반한 한반도의 평화와 아시아를..."
+            },
+            {
+              "title": "우리가 하는 일",
+              "content": "기도와 학습 및 실천을 통해 평화를 구현합니다."
+            }
+          ]
+        },
+        {
+          "type": "cardGrid",
+          "columns": [5],
+          "cards": [
+            { "title": "보본 확신 심전" },
+            { "title": "정의 현대" },
+            { "title": "비폭력 명확체 구축" },
+            { "title": "모본 깊음 예수" },
+            { "title": "자섯 및 정의" }
+          ]
+        },
+        {
+          "type": "banner",
+          "bg": "#5BA3D0",
+          "left": {
+            "title": "회비 납부 안내",
+            "content": "CMS 링크..."
+          },
+          "right": {
+            "type": "image",
+            "src": "/images/ocean-waves.jpg"
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "location",
+      "title": "오시는 길",
+      "path": "/contact/location.html",
+      "layout": "default",
+      "sections": [
+        {
+          "type": "map",
+          "provider": "google",
+          "lat": 37.5547,
+          "lng": 126.9041,
+          "zoom": 15
+        },
+        {
+          "type": "contactInfo",
+          "address": "서울시 마포구 토정로 2길 33, 국제가톨릭협회 210호",
+          "phone": "010-9689-2027",
+          "email": "paxchristikorea@gmail.com"
+        }
+      ]
+    },
+
+    {
+      "id": "founding-declaration",
+      "title": "창립선언문",
+      "path": "/about/founding-declaration.html",
+      "layout": "default",
+      "sections": [
+        {
+          "type": "backgroundImage",
+          "src": "/images/declaration-bg.jpg"
+        },
+        {
+          "type": "richText",
+          "title": "창립선언문",
+          "content": "[전체 선언문 내용...]"
+        },
+        {
+          "type": "signatories",
+          "title": "PCK 창립총회 준비위원회",
+          "members": [
+            "김문순(준부장)",
+            "박문수(부부자국)",
+            "이순진(부임자)"
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "history",
+      "title": "연혁",
+      "path": "/about/history.html",
+      "layout": "default",
+      "sections": [
+        {
+          "type": "timelineList",
+          "title": "연혁",
+          "events": [
+            {
+              "year": 2024,
+              "items": [
+                { "month": 3, "day": 15, "title": "3기 집행부 출범" }
+              ]
+            },
+            {
+              "year": 2022,
+              "items": [
+                { "month": 0, "day": 0, "title": "[내용 준비중]" }
+              ]
+            },
+            {
+              "year": 2019,
+              "items": [
+                { "month": 1, "day": 7, "title": "팍스크리스티코리아 창립 제안 및 임" },
+                { "month": 2, "day": 16, "title": "정팀법협 1차 모임" },
+                { "month": 3, "day": 19, "title": "창립총회" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "components": {
+    "header": {
+      "logo": {
+        "src": "/images/logo.svg",
+        "alt": "팍스크리스티코리아 로고",
+        "height": "80px"
+      },
+      "navigation": "main",
+      "sticky": true,
+      "bg": "#FFFFFF"
+    },
+    "footer": {
+      "columns": [
+        {
+          "title": "개인정보처리방침",
+          "links": []
+        },
+        {
+          "title": "Contact",
+          "address": "서울시 마포구 토정로 2길 33, 국제가톨릭협회 210호",
+          "phone": "010-9689-2027",
+          "email": "paxchristikorea@gmail.com"
+        }
+      ],
+      "socials": [
+        { "platform": "instagram", "url": "#" },
+        { "platform": "facebook", "url": "#" },
+        { "platform": "youtube", "url": "#" }
+      ],
+      "copyright": "COPYRIGHT (c) (주)위존 ALL RIGHTS RESERVED"
+    }
+  },
+
+  "dataFiles": {
+    "activities": {
+      "path": "/data/activities.json",
+      "description": "연도별 활동 데이터"
+    },
+    "announcements": {
+      "path": "/data/announcements.json",
+      "description": "공지사항 블로그 글"
+    },
+    "resources": {
+      "path": "/data/resources.json",
+      "description": "카테고리별 다운로드 자료"
+    },
+    "newsletter": {
+      "path": "/data/newsletter.json",
+      "description": "뉴스레터 아카이브"
+    },
+    "press": {
+      "path": "/data/press.json",
+      "description": "언론 보도 기사"
+    }
+  }
+}

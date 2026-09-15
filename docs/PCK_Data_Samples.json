@@ -1,0 +1,358 @@
+{
+  "description": "이 파일은 /data/ 폴더에 분리되어 저장됩니다. 각 섹션을 별도 파일로 나누시면 됩니다.",
+  "example_usage": "각 JSON을 별도 파일로 저장하여 필요시 로드합니다",
+
+  "activities.json": {
+    "activities": [
+      {
+        "id": "activity-2024-11-26",
+        "date": "2024-11-26",
+        "dateISO": "2024-11-26",
+        "year": 2024,
+        "month": 11,
+        "day": 26,
+        "title": "제3기 집행부 출범",
+        "description": "새로운 집행진 발족식을 개최했습니다",
+        "category": "행정",
+        "url": "/activities/2024-11-26.html",
+        "image": "/images/activities/2024-11-26.jpg"
+      },
+      {
+        "id": "activity-2024-11-10",
+        "date": "2024-11-10",
+        "year": 2024,
+        "month": 11,
+        "day": 10,
+        "title": "평화 포럼 개최",
+        "description": "한반도 평화를 위한 토론회가 열렸습니다",
+        "category": "교육",
+        "url": "/activities/2024-11-10.html"
+      },
+      {
+        "id": "activity-2024-10-30",
+        "date": "2024-10-30",
+        "year": 2024,
+        "month": 10,
+        "day": 30,
+        "title": "추계 평화행진",
+        "description": "가을 평화행진에 참여했습니다",
+        "category": "운동",
+        "url": "/activities/2024-10-30.html"
+      },
+      {
+        "id": "activity-2023-12-15",
+        "date": "2023-12-15",
+        "year": 2023,
+        "month": 12,
+        "day": 15,
+        "title": "2024년 신년 기도회",
+        "description": "새해 기도회를 개최했습니다",
+        "category": "영적활동"
+      }
+    ]
+  },
+
+  "announcements.json": {
+    "announcements": [
+      {
+        "id": "2024-11-26",
+        "date": "2024-11-26",
+        "dateISO": "2024-11-26",
+        "year": 2024,
+        "month": 11,
+        "day": 26,
+        "title": "2025년 사업 계획 안내",
+        "excerpt": "2025년의 주요 사업 계획을 공지합니다",
+        "content": "2025년 팍스크리스티코리아의 주요 사업은 다음과 같습니다...",
+        "author": "관리자",
+        "url": "/news/announcements/2024-11-26.html",
+        "category": "공지",
+        "prevId": "2024-11-10",
+        "nextId": "2024-12-01"
+      },
+      {
+        "id": "2024-11-10",
+        "date": "2024-11-10",
+        "year": 2024,
+        "month": 11,
+        "title": "정기총회 개최 안내",
+        "excerpt": "2024년 정기총회를 개최합니다",
+        "content": "일시: 2024년 11월 20일...",
+        "url": "/news/announcements/2024-11-10.html"
+      },
+      {
+        "id": "2024-10-30",
+        "date": "2024-10-30",
+        "year": 2024,
+        "month": 10,
+        "title": "추계 평화행진 후기",
+        "excerpt": "지난 평화행진의 현장 후기입니다",
+        "content": "10월 29일에 열린 추계 평화행진에는...",
+        "url": "/news/announcements/2024-10-30.html"
+      },
+      {
+        "id": "2024-09-15",
+        "date": "2024-09-15",
+        "year": 2024,
+        "month": 9,
+        "title": "하계 교육 프로그램 종료",
+        "excerpt": "올해 하계 교육이 성공적으로 마무리되었습니다",
+        "content": "...",
+        "url": "/news/announcements/2024-09-15.html"
+      },
+      {
+        "id": "2023-12-20",
+        "date": "2023-12-20",
+        "year": 2023,
+        "month": 12,
+        "title": "2023년 정기총회 결과",
+        "excerpt": "12월 15일 정기총회가 개최되었습니다",
+        "content": "...",
+        "url": "/news/announcements/2023-12-20.html"
+      }
+    ]
+  },
+
+  "resources.json": {
+    "categories": [
+      {
+        "id": "founding",
+        "name": "설립 관련 자료",
+        "icon": "📁",
+        "files": [
+          {
+            "id": "founding-decl",
+            "name": "창립선언문",
+            "file": "/files/founding-declaration.pdf",
+            "size": "150KB",
+            "date": "2019-08-24",
+            "description": "팍스크리스티코리아의 창립선언문입니다"
+          },
+          {
+            "id": "founding-doctrine",
+            "name": "정팀선언문",
+            "file": "/files/founding-doctrine.pdf",
+            "size": "89KB",
+            "date": "2019-08-24"
+          },
+          {
+            "id": "constitution",
+            "name": "조직규약",
+            "file": "/files/constitution.pdf",
+            "size": "120KB",
+            "date": "2019-08-24"
+          }
+        ]
+      },
+      {
+        "id": "learning",
+        "name": "학습 자료",
+        "icon": "📚",
+        "files": [
+          {
+            "id": "peace-basics",
+            "name": "평화 기초 강좌",
+            "file": "/files/peace-basics.pdf",
+            "size": "2.5MB",
+            "date": "2023-03-15"
+          },
+          {
+            "id": "justice-peace",
+            "name": "정의와 평화",
+            "file": "/files/justice-peace.pdf",
+            "size": "1.8MB",
+            "date": "2023-06-20"
+          },
+          {
+            "id": "nonviolence",
+            "name": "비폭력 이론",
+            "file": "/files/nonviolence-theory.pdf",
+            "size": "3.2MB",
+            "date": "2024-01-10"
+          }
+        ]
+      },
+      {
+        "id": "minutes",
+        "name": "회의 기록",
+        "icon": "📄",
+        "files": [
+          {
+            "id": "assembly-2024",
+            "name": "2024년 정기총회",
+            "file": "/files/assembly-2024.pdf",
+            "size": "450KB",
+            "date": "2024-11-20"
+          },
+          {
+            "id": "assembly-2023",
+            "name": "2023년 정기총회",
+            "file": "/files/assembly-2023.pdf",
+            "size": "420KB",
+            "date": "2023-11-15"
+          },
+          {
+            "id": "board-2024-11",
+            "name": "2024년 11월 임원회의",
+            "file": "/files/board-2024-11.pdf",
+            "size": "200KB",
+            "date": "2024-11-10"
+          }
+        ]
+      }
+    ]
+  },
+
+  "newsletter.json": {
+    "subscription": {
+      "title": "뉴스레터 구독",
+      "description": "PCK의 소식을 정기적으로 받아보세요",
+      "formAction": "https://formspree.io/f/YOUR_FORM_ID",
+      "placeholder": "이메일을 입력하세요",
+      "buttonText": "구독 신청"
+    },
+    "archives": [
+      {
+        "year": 2024,
+        "month": 11,
+        "title": "2024년 11월호",
+        "issue": 47,
+        "file": "/files/newsletter-2024-11.pdf",
+        "size": "2.5MB",
+        "date": "2024-11-30",
+        "highlights": [
+          "3기 집행부 출범",
+          "평화 포럼 개최",
+          "추계 평화행진 후기"
+        ]
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "title": "2024년 10월호",
+        "issue": 46,
+        "file": "/files/newsletter-2024-10.pdf",
+        "size": "2.3MB",
+        "date": "2024-10-31",
+        "highlights": [
+          "정기총회 안내",
+          "하계 교육 종료"
+        ]
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "title": "2024년 9월호",
+        "issue": 45,
+        "file": "/files/newsletter-2024-09.pdf",
+        "size": "2.1MB",
+        "date": "2024-09-30"
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "title": "2024년 8월호",
+        "issue": 44,
+        "file": "/files/newsletter-2024-08.pdf",
+        "size": "2.0MB",
+        "date": "2024-08-31"
+      },
+      {
+        "year": 2023,
+        "month": 12,
+        "title": "2023년 12월호",
+        "issue": 36,
+        "file": "/files/newsletter-2023-12.pdf",
+        "size": "1.9MB",
+        "date": "2023-12-31"
+      }
+    ]
+  },
+
+  "press.json": {
+    "articles": [
+      {
+        "id": "press-2024-11-20",
+        "date": "2024-11-20",
+        "title": "팍스크리스티, 평화운동 펼친다",
+        "source": "가톨릭신문",
+        "url": "https://www.catholictimes.org/...",
+        "excerpt": "팍스크리스티코리아가 새로운 집행부를 출범하며..."
+      },
+      {
+        "id": "press-2024-10-15",
+        "date": "2024-10-15",
+        "title": "한반도 평화를 위해",
+        "source": "종교신문",
+        "url": "https://www.religiousnews.com/...",
+        "excerpt": "평화운동 단체들이 함께 모여..."
+      },
+      {
+        "id": "press-2024-09-10",
+        "date": "2024-09-10",
+        "title": "평화의 목소리",
+        "source": "민족신문",
+        "url": "https://www.minjoknews.com/...",
+        "excerpt": "..."
+      },
+      {
+        "id": "press-2023-08-24",
+        "date": "2023-08-24",
+        "title": "팍스크리스티 창립 4주년",
+        "source": "가톨릭신문",
+        "url": "https://www.catholictimes.org/...",
+        "excerpt": "..."
+      }
+    ]
+  },
+
+  "gallery.json": {
+    "images": [
+      {
+        "id": "gallery-001",
+        "src": "/images/gallery-001.jpg",
+        "alt": "활동 사진 1",
+        "title": "2024년 평화행진",
+        "date": "2024-10-29",
+        "category": "운동"
+      },
+      {
+        "id": "gallery-002",
+        "src": "/images/gallery-002.jpg",
+        "alt": "활동 사진 2",
+        "title": "정기총회 모습",
+        "date": "2024-11-20",
+        "category": "회의"
+      },
+      {
+        "id": "gallery-003",
+        "src": "/images/gallery-003.jpg",
+        "alt": "활동 사진 3",
+        "title": "교육 프로그램",
+        "date": "2024-08-15",
+        "category": "교육"
+      }
+    ]
+  },
+
+  "압축_사용법": {
+    "step1": "각 섹션을 별도 파일로 저장",
+    "file_structure": {
+      "data": {
+        "activities.json": "연도별 활동 데이터",
+        "announcements.json": "공지사항 블로그 글",
+        "resources.json": "카테고리별 다운로드",
+        "newsletter.json": "뉴스레터 아카이브",
+        "press.json": "언론 보도 기사",
+        "gallery.json": "갤러리 이미지 목록"
+      }
+    },
+    "step2": "Vibe/HTML에서 로드",
+    "example_code": {
+      "fetch": "fetch('/data/activities.json').then(r => r.json()).then(data => {...})",
+      "or_static": "HTML에 <script src='/data/activities.json'></script> 포함 후 변수로 사용"
+    },
+    "step3": "반복 렌더링",
+    "example": "activities.forEach(a => { 생성된 HTML 추가 })"
+  }
+}

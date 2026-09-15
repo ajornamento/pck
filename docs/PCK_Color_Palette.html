@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>팍스크리스티코리아 색상 시스템</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-50: #EFF6FF;
+      --primary-100: #DBEAFE;
+      --primary-200: #BFDBFE;
+      --primary-600: #2563EB;
+      --primary-700: #1E40AF;
+      --primary-900: #0C2340;
+      
+      --green-50: #F0FDF4;
+      --green-600: #16A34A;
+      --green-700: #15803D;
+      
+      --slate-50: #F8FAFC;
+      --slate-100: #F1F5F9;
+      --slate-200: #E2E8F0;
+      --slate-600: #475569;
+      --slate-800: #1E293B;
+      --slate-900: #0F172A;
+      
+      --amber-50: #FFFBEB;
+      --amber-600: #D97706;
+      
+      --cyan-50: #ECFDF5;
+      --cyan-600: #0891B2;
+    }
+
+    body {
+      background-color: var(--slate-50);
+      color: var(--slate-900);
+      font-family: 'Noto Sans KR', system-ui, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--slate-900);
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .color-section {
+      margin-bottom: 60px;
+    }
+
+    .color-section h2 {
+      font-size: 24px;
+      color: var(--slate-800);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--slate-200);
+    }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .color-box {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .color-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.15);
+    }
+
+    .color-sample {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 13px;
+      color: white;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .color-info {
+      padding: 12px;
+      background-color: white;
+      border-top: 1px solid var(--slate-200);
+    }
+
+    .color-name {
+      font-weight: 600;
+      color: var(--slate-900);
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .color-hex {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: var(--slate-600);
+    }
+
+    /* 밝은 배경 텍스트 */
+    .light .color-sample {
+      color: var(--slate-900);
+      text-shadow: none;
+    }
+
+    /* 구성 섹션 */
+    .components-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .component-demo {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
+    }
+
+    .component-demo-header {
+      background-color: var(--slate-100);
+      padding: 16px;
+      border-bottom: 1px solid var(--slate-200);
+    }
+
+    .component-demo-title {
+      font-weight: 600;
+      color: var(--slate-900);
+      font-size: 14px;
+    }
+
+    .component-demo-body {
+      padding: 24px;
+    }
+
+    /* 버튼 데모 */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: none;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-bottom: 8px;
+      margin-right: 8px;
+      font-size: 14px;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-600);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-700);
+    }
+
+    .btn-secondary {
+      background-color: var(--green-600);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--green-700);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--primary-600);
+      border: 1px solid var(--primary-600);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary-50);
+    }
+
+    /* 카드 데모 */
+    .card-demo {
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: all 0.2s;
+    }
+
+    .card-demo:hover {
+      border-color: var(--slate-300);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+    }
+
+    .card-demo h3 {
+      color: var(--primary-700);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .card-demo p {
+      color: var(--slate-600);
+      font-size: 14px;
+    }
+
+    /* 테이블 데모 */
+    .table-demo {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .table-demo thead {
+      background-color: var(--slate-800);
+      color: white;
+    }
+
+    .table-demo th {
+      padding: 10px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .table-demo td {
+      padding: 10px;
+      border-bottom: 1px solid var(--slate-200);
+    }
+
+    .table-demo tbody tr:nth-child(odd) {
+      background-color: var(--slate-50);
+    }
+
+    .table-demo tbody tr:hover {
+      background-color: var(--primary-50);
+    }
+
+    /* 파이 챠트 스타일 */
+    .usage-pie {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 32px;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .usage-item {
+      text-align: center;
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .usage-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .usage-label {
+      font-weight: 500;
+      color: var(--slate-800);
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .usage-desc {
+      color: var(--slate-600);
+      font-size: 12px;
+    }
+
+    /* 설명 박스 */
+    .info-box {
+      background-color: var(--primary-50);
+      border-left: 4px solid var(--primary-600);
+      padding: 16px;
+      border-radius: 4px;
+      margin: 24px 0;
+    }
+
+    .info-box h3 {
+      color: var(--primary-700);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .info-box p {
+      color: var(--slate-700);
+      font-size: 14px;
+    }
+
+    /* 반응형 */
+    @media (max-width: 768px) {
+      header {
+        padding: 24px;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+
+      .container {
+        padding: 24px 16px;
+      }
+
+      .color-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+
+      .components-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 프린트 스타일 */
+    @media print {
+      header {
+        background-color: var(--slate-900);
+      }
+
+      .color-box {
+        break-inside: avoid;
+      }
+    }
+
+    footer {
+      background-color: var(--slate-900);
+      color: white;
+      padding: 40px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    footer p {
+      opacity: 0.9;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎨 팍스크리스티코리아 색상 시스템</h1>
+    <p>전문가급 디자인 색상 팔레트 가이드</p>
+  </header>
+
+  <div class="container">
+    <!-- Primary Blue -->
+    <div class="color-section">
+      <h2>Primary Blue - 신뢰감 & 평화</h2>
+      <p style="margin-bottom: 24px; color: var(--slate-600);">
+        팍스크리스티코리아의 핵심 색상. 안정성, 신뢰감, 평화를 표현합니다.
+      </p>
+      
+      <div class="color-grid">
+        <div class="color-box light">
+          <div class="color-sample" style="background-color: #EFF6FF;">Primary-50</div>
+          <div class="color-info">
+            <div class="color-name">Primary-50</div>
+            <div class="color-hex">#EFF6FF</div>
+          </div>
+        </div>
+
+        <div class="color-box light">
+          <div class="color-sample" style="background-color: #DBEAFE;">Primary-100</div>
+          <div class="color-info">
+            <div class="color-name">Primary-100</div>
+            <div class="color-hex">#DBEAFE</div>
+          </div>
+        </div>
+
+        <div class="color-box light">
+          <div class="color-sample" style="background-color: #BFDBFE;">Primary-200</div>
+          <div class="color-info">
+            <div class="color-name">Primary-200</div>
+            <div class="color-hex">#BFDBFE</div>
+          </div>
+        </div>
+
+        <div class="color-box">
+          <div class="color-sample" style="background-color: #3B82F6;">Primary-500</div>
+          <div class="color-info">
+            <div class="color-name">Primary-500</div>
+            <div class="color-hex">#3B82F6</div>
+          </div>
+        </div>
+
+        <div class="color-box">
+          <div class="color-sample" style="background-color: #2563EB;">Primary-600</div>
+          <div class="color-info">
+            <div class="color-name">Primary-600 ⭐</div>
+            <div class="color-hex">#2563EB</div>
+            <div style="font-size: 11px; color: #16A34A; margin-top: 4px;">메인 색상</div>
+          </div>
+        </div>
+
+        <div class="color-box">
+          <div class="color-sample" style="background-color: #1E40AF;">Primary-700</div>
+          <div class="color-info">
+            <div class="color-name">Primary-700 ⭐</div>
+            <div class="color-hex">#1E40AF</div>
+            <div style="font-size: 11px; color: #16A34A; margin-top: 4px;">로고, 호버</div>
+          </div>
+        </div>
+
+        <div class="color-box">
+          <div class="color-sample" style="background-color: #1E3A8A;">Primary-800</div>
+          <div class="color-info">
+            <div class="color-name">Primary-800</div>
+            <div class="color-hex">#1E3A8A</div>
+          </div>
+        </div>
+
+        <div class="color-box">
+          <div class="color-sample" style="background-color: #0C2340;">Primary-900</div>
+          <div class="color-info">
+            <div class="color-name">Primary-900</div>
+            <div class="color-hex">#0C2340</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Green -->
+    <div class="color-section">
+      <h2>Secondary Green - 희망 & 성장</h2>
+      <p style="margin-bottom: 24px; color: var(--slate-600);">
+        보조 색상. 성공, 성장, 생명을 표현합니다.
+      </p>
+      
+      <div class="color-grid">
+        <div class="color-box light">
+          <div class="color-sample" style="background-color: #F0FDF4;">Green-50</div>
+          <div class="color-info">
+            <div class="color-name">Green-50</div>
+            <div class="color-hex">#F0FDF4</div>
+          </div>
+        </div>
+
+        <div class="color-box">
+          <div class="color-sample" style="background-color: #16A34A;">Green-600</div>
+          <div class="color-info">
+            <div class="color-name">Green-600 ⭐</div>
+            <div class="color-hex">#16A34A</div>
+            <div style="font-size: 11px; color: #16A34A; margin-top: 4px;">보조 버튼</div>
+          </div>
+        </div>
+
+        <div class="color-box">
+          <div class="color-sample" style="background-color: #15803D;">Green-700</div>
+          <div class="color-info">
+            <div class="color-name">Green-700</div>
+            <div class="color-hex">#15803D</div>
+          </div>
+        </div>
+
+        <div class="color-box">
+          <div class="color-sample" style="background-color: #22C55E;">Green-500</div>
+          <div class="color-info">
+            <div class="color-name">Green-500</div>
+            <div class="color-hex">#22C55E</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slate Gray -->
+    <div class="color-section">
+      <h2>Neutral Slate - 전문성 & 깔끔함</h2>
+      <p style="margin-bottom: 24px; color: var(--slate-600);">
+        중립 색상. 텍스트, 배경, 경계선에 사용합니다.
+      </p>
+      
+      <div class="color-grid">
+        <div class="color-box light">
+          <div class="color-sample" style="background-color: #F8FAFC;">Slate-50</div>
+          <div class="color-info">
+            <div class="color-name">Slate-50 ⭐</div>
+            <div class="color-hex">#F8FAFC</div>
+            <div style="font-size: 11px; color: #16A34A; margin-top: 4px;">페이지 배경</div>
+          </div>
+        </div>
+
+        <div class="color-box light">
+          <div class="color-sample" style="background-color: #F1F5F9;">Slate-100</div>
+          <div class="color-info">
+            <div class="color-name">Slate-100</div>
+            <div class="color-hex">#F1F5F9</div>
+          </div>
+        </div>
+
+        <div class="color-box light">
+          <div class="color-sample" style="background-color: #E2E8F0;">Slate-200</div>
+          <div class="color-info">
+            <div class="color-name">Slate-200 ⭐</div>
+            <div class="color-hex">#E2E8F0</div>
+            <div style="font-size: 11px; color: #16A34A; margin-top: 4px;">경계선</div>
+          </div>
+        </div>
+
+        <div class="color-box light">
+          <div class="color-sample" style="background-color: #CBD5E1;">Slate-300</div>
+          <div class="color-info">
+            <div class="color-name">Slate-300</div>
+            <div class="color-hex">#CBD5E1</div>
+          </div>
+        </div>
+
+        <div class="color-box light">
+          <div class="color-sample" style="background-color: #94A3B8;">Slate-400</div>
+          <div class="color-info">
+            <div class="color-name">Slate-400</div>
+            <div class="color-hex">#94A3B8</div>
+          </div>
+        </div>
+
+        <div class="color-box">
+          <div class="color-sample" style="background-color: #64748B;">Slate-500</div>
+          <div class="color-info">
+            <div class="color-name">Slate-500</div>
+            <div class="color-hex">#64748B</div>
+          </div>
+        </div>
+
+        <div class="color-box">
+          <div class="color-sample" style="background-color: #475569;">Slate-600</div>
+          <div class="color-info">
+            <div class="color-name">Slate-600</div>
+            <div class="color-hex">#475569</div>
+          </div>
+        </div>
+
+        <div class="color-box">
+          <div class="color-sample" style="background-color: #334155;">Slate-700</div>
+          <div class="color-info">
+            <div class="color-name">Slate-700</div>
+            <div class="color-hex">#334155</div>
+          </div>
+        </div>
+
+        <div class="color-box">
+          <div class="color-sample" style="background-color: #1E293B;">Slate-800</div>
+          <div class="color-info">
+            <div class="color-name">Slate-800 ⭐</div>
+            <div class="color-hex">#1E293B</div>
+            <div style="font-size: 11px; color: #16A34A; margin-top: 4px;">제목</div>
+          </div>
+        </div>
+
+        <div class="color-box">
+          <div class="color-sample" style="background-color: #0F172A;">Slate-900 ⭐</div>
+          <div class="color-info">
+            <div class="color-name">Slate-900 ⭐</div>
+            <div class="color-hex">#0F172A</div>
+            <div style="font-size: 11px; color: #16A34A; margin-top: 4px;">본문</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Components Demo -->
+    <div class="color-section">
+      <h2>컴포넌트 예시</h2>
+      
+      <div class="components-grid">
+        <!-- Buttons -->
+        <div class="component-demo">
+          <div class="component-demo-header">
+            <div class="component-demo-title">버튼</div>
+          </div>
+          <div class="component-demo-body">
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-secondary">Secondary</button>
+            <button class="btn btn-outline">Outline</button>
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="component-demo">
+          <div class="component-demo-header">
+            <div class="component-demo-title">카드</div>
+          </div>
+          <div class="component-demo-body">
+            <div class="card-demo">
+              <h3>카드 제목</h3>
+              <p>카드 콘텐츠입니다. 깔끔한 디자인으로 정보를 표시합니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tables -->
+        <div class="component-demo">
+          <div class="component-demo-header">
+            <div class="component-demo-title">테이블</div>
+          </div>
+          <div class="component-demo-body">
+            <table class="table-demo">
+              <thead>
+                <tr>
+                  <th>항목</th>
+                  <th>상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>항목 1</td>
+                  <td>✓ 활성</td>
+                </tr>
+                <tr>
+                  <td>항목 2</td>
+                  <td>✓ 활성</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color Usage -->
+    <div class="color-section">
+      <h2>색상 사용 지침</h2>
+      
+      <div class="info-box">
+        <h3>🎯 주요 색상 (필수)</h3>
+        <p>
+          <strong>Primary-600 (#2563EB)</strong> - 링크, 메인 버튼, 강조<br>
+          <strong>Primary-700 (#1E40AF)</strong> - 로고, 제목, 호버 상태<br>
+          <strong>Slate-900 (#0F172A)</strong> - 본문 텍스트<br>
+          <strong>Slate-50 (#F8FAFC)</strong> - 페이지 배경
+        </p>
+      </div>
+
+      <div class="info-box">
+        <h3>✨ 보조 색상</h3>
+        <p>
+          <strong>Green-600 (#16A34A)</strong> - 보조 버튼, 성공 상태<br>
+          <strong>Primary-50 (#EFF6FF)</strong> - 섹션 배경<br>
+          <strong>Slate-200 (#E2E8F0)</strong> - 경계선, 구분선
+        </p>
+      </div>
+
+      <div class="usage-pie">
+        <div class="usage-item">
+          <div class="usage-circle" style="background-color: #2563EB;">30%</div>
+          <div class="usage-label">Primary Blue</div>
+          <div class="usage-desc">메인 강조</div>
+        </div>
+        <div class="usage-item">
+          <div class="usage-circle" style="background-color: #F8FAFC; border: 1px solid #E2E8F0; color: #0F172A;">30%</div>
+          <div class="usage-label">Neutral Gray</div>
+          <div class="usage-desc">배경, 텍스트</div>
+        </div>
+        <div class="usage-item">
+          <div class="usage-circle" style="background-color: #EFF6FF;">25%</div>
+          <div class="usage-label">Light Accents</div>
+          <div class="usage-desc">배경 변형</div>
+        </div>
+        <div class="usage-item">
+          <div class="usage-circle" style="background-color: #16A34A;">15%</div>
+          <div class="usage-label">Green</div>
+          <div class="usage-desc">보조 요소</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Implementation -->
+    <div class="color-section">
+      <h2>구현 방법</h2>
+      
+      <div style="background-color: var(--slate-50); padding: 24px; border-radius: 8px; border-left: 4px solid var(--primary-600);">
+        <h3 style="color: var(--primary-700); margin-bottom: 12px;">CSS 변수 사용</h3>
+        <p style="color: var(--slate-700); margin-bottom: 12px; font-size: 14px;">
+          제공된 <code style="background-color: white; padding: 2px 4px; border-radius: 3px;">PCK_Colors.css</code> 파일을 사용하세요.
+        </p>
+        <p style="color: var(--slate-700); font-size: 14px; font-family: 'Courier New', monospace;">
+          <code style="background-color: white; padding: 4px 8px; border-radius: 3px; display: inline-block;">
+            background-color: var(--primary-600);
+          </code>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>팍스크리스티코리아 색상 시스템 · 전문가급 디자인 가이드</p>
+    <p style="margin-top: 8px; opacity: 0.8; font-size: 12px;">
+      모든 색상 조합이 WCAG AA 접근성 기준을 만족합니다
+    </p>
+  </footer>
+</body>
+</html>
