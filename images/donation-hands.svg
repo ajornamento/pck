@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" role="img" aria-label="올리브 가지 사이로 맞잡은 두 손, 연대와 참여를 상징">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#F0FDF4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="320" fill="url(#bg)"/>
+
+  <!-- olive branches -->
+  <g stroke-linecap="round">
+    <path d="M 40,175 Q 220,150 380,168" stroke="#15803D" stroke-width="5" fill="none"/>
+    <ellipse cx="80" cy="171" rx="15" ry="7" fill="#22C55E" transform="rotate(-20 80 171)"/>
+    <ellipse cx="135" cy="160" rx="15" ry="7" fill="#16A34A" transform="rotate(-8 135 160)"/>
+    <ellipse cx="190" cy="152" rx="15" ry="7" fill="#22C55E" transform="rotate(5 190 152)"/>
+    <ellipse cx="245" cy="151" rx="15" ry="7" fill="#16A34A" transform="rotate(-5 245 151)"/>
+    <ellipse cx="300" cy="156" rx="15" ry="7" fill="#22C55E" transform="rotate(10 300 156)"/>
+    <ellipse cx="350" cy="164" rx="15" ry="7" fill="#16A34A" transform="rotate(-12 350 164)"/>
+
+    <path d="M 860,175 Q 680,150 520,168" stroke="#15803D" stroke-width="5" fill="none"/>
+    <ellipse cx="820" cy="171" rx="15" ry="7" fill="#22C55E" transform="rotate(20 820 171)"/>
+    <ellipse cx="765" cy="160" rx="15" ry="7" fill="#16A34A" transform="rotate(8 765 160)"/>
+    <ellipse cx="710" cy="152" rx="15" ry="7" fill="#22C55E" transform="rotate(-5 710 152)"/>
+    <ellipse cx="655" cy="151" rx="15" ry="7" fill="#16A34A" transform="rotate(5 655 151)"/>
+    <ellipse cx="600" cy="156" rx="15" ry="7" fill="#22C55E" transform="rotate(-10 600 156)"/>
+    <ellipse cx="550" cy="164" rx="15" ry="7" fill="#16A34A" transform="rotate(12 550 164)"/>
+  </g>
+
+  <!-- clasped hands -->
+  <g stroke-linejoin="round">
+    <rect x="395" y="185" width="75" height="50" rx="20" fill="#7EB6EE" stroke="#2E5FA3" stroke-width="3"/>
+    <rect x="430" y="185" width="75" height="50" rx="20" fill="#86EFAC" stroke="#15803D" stroke-width="3"/>
+
+    <circle cx="435" cy="170" r="34" fill="#7EB6EE" stroke="#2E5FA3" stroke-width="4"/>
+    <circle cx="465" cy="170" r="34" fill="#86EFAC" stroke="#15803D" stroke-width="4"/>
+
+    <circle cx="418" cy="145" r="11" fill="#7EB6EE" stroke="#2E5FA3" stroke-width="3"/>
+    <circle cx="482" cy="145" r="11" fill="#86EFAC" stroke="#15803D" stroke-width="3"/>
+
+    <g stroke="#1E293B" stroke-width="3" fill="none" opacity="0.35" stroke-linecap="round">
+      <path d="M 404,157 Q 450,171 496,157"/>
+      <path d="M 402,169 Q 450,183 498,169"/>
+      <path d="M 404,181 Q 450,195 496,181"/>
+    </g>
+  </g>
+</svg>

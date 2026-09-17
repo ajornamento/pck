@@ -174,11 +174,40 @@ main > #home.hero {
   flex: 1;
   min-height: 200px;
   background-color: var(--slate-200);
+  background-image: url('../images/donation-hands.svg');
+  background-size: cover;
+  background-position: center;
 }
 
 @media (max-width: 768px) {
   .donation-banner {
     flex-direction: column;
+  }
+}
+
+/* ==================== METHODOLOGY GRID ==================== */
+
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .method-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.foundation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .foundation-grid {
+    grid-template-columns: 1fr;
   }
 }
 
