@@ -682,12 +682,3 @@ hr {
     grid-template-columns: 1fr;
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  /* 다크모드 대비 (선택사항 - 향후 적용) */
-  :root {
-    --text-primary: #F1F5F9;
-    --bg-primary: #0F172A;
-    --bg-section: #1E293B;
-  }
-}
