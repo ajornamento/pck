@@ -211,6 +211,12 @@ main > #home.hero {
   }
 }
 
+.board-photo {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
 /* ==================== LOCATION ==================== */
 
 .location-layout {

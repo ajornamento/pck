@@ -289,6 +289,43 @@ a:hover {
   gap: 24px;
 }
 
+/* ==================== NEWSLETTER CARDS ==================== */
+
+.newsletter-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.newsletter-card-body {
+  padding: 20px 24px 24px;
+}
+
+.newsletter-date {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.newsletter-pdf-link {
+  color: var(--primary-600);
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.newsletter-pdf-link:hover {
+  color: var(--primary-700);
+}
+
 /* ==================== SECTIONS ==================== */
 
 section {
@@ -590,6 +627,11 @@ hr {
 .mt-8 { margin-top: 8px; }
 .mt-16 { margin-top: 16px; }
 .mt-24 { margin-top: 24px; }
+
+.prayer-line {
+  padding-left: 1.4em;
+  text-indent: -1.4em;
+}
 
 .p-8 { padding: 8px; }
 .p-16 { padding: 16px; }
