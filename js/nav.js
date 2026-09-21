@@ -14,3 +14,27 @@ if (sections.length && navLinks.length && 'IntersectionObserver' in window) {
 
   sections.forEach((section) => observer.observe(section));
 }
+
+const navToggle = document.querySelector('.nav-toggle');
+const headerNav = document.querySelector('header nav');
+
+if (navToggle && headerNav) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = headerNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  headerNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      headerNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!headerNav.classList.contains('open')) return;
+    if (headerNav.contains(event.target) || navToggle.contains(event.target)) return;
+    headerNav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+}

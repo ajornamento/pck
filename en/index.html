@@ -8,14 +8,17 @@
 </head>
 <body>
   <header>
-    <h1><img src="../images/logo.svg" alt="팍스크리스티코리아" class="logo"></h1>
-    <nav>
+    <h1><a href="../index.html#home"><img src="../images/logo.svg" alt="팍스크리스티코리아" class="logo"></a></h1>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <nav id="site-nav">
       <a href="../index.html#home">홈</a>
       <a href="../index.html#about">PCK소개</a>
-      <a href="../index.html#activities">주요활동</a>
       <a href="../index.html#donation">참여안내</a>
       <a href="../index.html#location">오시는 길</a>
-      <a href="../index.html#prayers">기도문</a>
+      <a href="../activities/index.html">주요활동</a>
+      <a href="../prayers/index.html">기도문</a>
       <a href="../news/index.html">PCK뉴스</a>
       <a href="../peace-message/index.html">평화의 날 담화</a>
       <a href="../network/index.html">국제네트워크</a>
@@ -49,5 +52,7 @@
   <footer>
     <p>&copy; 2024 Pax Christi Korea</p>
   </footer>
+
+  <script src="../js/nav.js" defer></script>
 </body>
 </html>
