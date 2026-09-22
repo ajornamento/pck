@@ -3,7 +3,126 @@
     "id": "2022-08-24",
     "title": "2022.08.24 News Letter",
     "date": "2022-08-24",
-    "cover": "images/newsletters/2022-08-24/cover.jpg",
     "pdf": "files/newsletters/2022-08-24.pdf"
+  },
+  {
+    "id": "2026-01",
+    "title": "2026년 1호 뉴스레터 (1월~2월)",
+    "date": "2026-01-01",
+    "url": "https://blog.naver.com/paxchristikorea/224221489460"
+  },
+  {
+    "id": "2026-02",
+    "title": "2026년 2호 뉴스레터 (3월~4월)",
+    "date": "2026-03-01",
+    "url": "https://blog.naver.com/paxchristikorea/224294731423"
+  },
+  {
+    "id": "2026-03",
+    "title": "2026년 3호 뉴스레터 (5월~6월)",
+    "date": "2026-05-01",
+    "url": "https://blog.naver.com/paxchristikorea/224348739924"
+  },
+  {
+    "id": "2024-07",
+    "title": "2024년 뉴스레터 (7월~9월)",
+    "date": "2024-07-01",
+    "url": "https://cafe.naver.com/paxchristikorea/4"
+  },
+  {
+    "id": "2024-10",
+    "title": "2024년 10월 뉴스레터",
+    "date": "2024-10-01",
+    "url": "https://cafe.naver.com/paxchristikorea/33"
+  },
+  {
+    "id": "2024-11",
+    "title": "2024년 11월 뉴스레터",
+    "date": "2024-11-01",
+    "url": "https://cafe.naver.com/paxchristikorea/32"
+  },
+  {
+    "id": "2024-12",
+    "title": "2024년 12월 뉴스레터",
+    "date": "2024-12-01",
+    "url": "https://cafe.naver.com/paxchristikorea/31"
+  },
+  {
+    "id": "2025-01",
+    "title": "2025년 뉴스레터 (1월~2월)",
+    "date": "2025-01-01",
+    "url": "https://cafe.naver.com/paxchristikorea/22"
+  },
+  {
+    "id": "2025-03",
+    "title": "2025년 뉴스레터 (3월~4월)",
+    "date": "2025-03-01",
+    "url": "https://cafe.naver.com/paxchristikorea/42"
+  },
+  {
+    "id": "2025-05",
+    "title": "2025년 뉴스레터 (5월~6월)",
+    "date": "2025-05-01",
+    "url": "https://cafe.naver.com/paxchristikorea/43"
+  },
+  {
+    "id": "2025-07",
+    "title": "2025년 뉴스레터 (7월~8월)",
+    "date": "2025-07-01",
+    "url": "https://cafe.naver.com/paxchristikorea/44"
+  },
+  {
+    "id": "2025-09",
+    "title": "2025년 뉴스레터 (9월~10월)",
+    "date": "2025-09-01",
+    "url": "https://cafe.naver.com/paxchristikorea/50"
+  },
+  {
+    "id": "2025-11",
+    "title": "2025년 뉴스레터 (11월~12월)",
+    "date": "2025-11-01",
+    "url": "https://cafe.naver.com/paxchristikorea/51"
+  },
+  {
+    "id": "2024-01",
+    "title": "2024년 뉴스레터 (1월~3월)",
+    "date": "2024-01-01",
+    "url": "https://stibee.com/api/v1.0/emails/share/qaqHlMFcIGnaQNP6mutIgDlsriTh0HA"
+  },
+  {
+    "id": "2024-04",
+    "title": "2024년 뉴스레터 (4월~6월)",
+    "date": "2024-04-01",
+    "pdf": "files/newsletters/2024-04.pdf"
+  },
+  {
+    "id": "brief-2024-04",
+    "title": "월간 소식 (2024년 4월)",
+    "date": "2024-04-01",
+    "pdf": "files/newsletters/brief-2024-04.pdf"
+  },
+  {
+    "id": "brief-2024-05",
+    "title": "월간 소식 (2024년 5월)",
+    "date": "2024-05-01",
+    "pdf": "files/newsletters/brief-2024-05.pdf"
+  },
+  {
+    "id": "brief-2024-06",
+    "title": "월간 소식 (2024년 6월)",
+    "date": "2024-06-01",
+    "pdf": "files/newsletters/brief-2024-06.pdf"
+  },
+  {
+    "id": "brief-2024-07",
+    "title": "월간 소식 (2024년 7월)",
+    "date": "2024-07-01",
+    "pdf": "files/newsletters/brief-2024-07.pdf"
+  },
+  {
+    "id": "brief-2024-08",
+    "title": "월간 소식 (2024년 8월)",
+    "date": "2024-08-01",
+    "pdf": "files/newsletters/brief-2024-08.pdf"
   }
 ]

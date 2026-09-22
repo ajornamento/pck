@@ -298,6 +298,14 @@ a:hover {
   flex-direction: column;
 }
 
+.newsletter-card--text {
+  padding: 24px;
+}
+
+.newsletter-card--text .newsletter-card-body {
+  padding: 0;
+}
+
 .newsletter-thumb {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -598,10 +606,12 @@ footer p {
 }
 
 .quote-banner p {
+  color: var(--text-inverse);
   font-size: 20px;
   font-weight: 600;
   line-height: 1.8;
   margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
 }
 
 /* ==================== DIVIDERS ==================== */

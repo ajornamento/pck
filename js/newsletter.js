@@ -17,17 +17,30 @@
 
       container.innerHTML = sorted
         .map((item) => {
-          const cover = '../' + item.cover;
-          const pdf = '../' + item.pdf;
+          const href = item.pdf ? '../' + item.pdf : item.url;
+          const linkLabel = item.pdf ? 'PDF 보기' : '뉴스레터 보기';
+          const linkAttrs = 'target="_blank" rel="noopener"';
+
+          if (item.cover) {
+            const cover = '../' + item.cover;
+            return `
+              <div class="card newsletter-card">
+                <a href="${href}" target="_blank" rel="noopener">
+                  <img src="${cover}" alt="${item.title} 표지" class="newsletter-thumb">
+                </a>
+                <div class="newsletter-card-body">
+                  <h3 class="card-title">${item.title}</h3>
+                  <a class="newsletter-pdf-link" href="${href}" ${linkAttrs}>${linkLabel}</a>
+                </div>
+              </div>
+            `;
+          }
+
           return `
-            <div class="card newsletter-card">
-              <a href="${pdf}" target="_blank" rel="noopener">
-                <img src="${cover}" alt="${item.title} 표지" class="newsletter-thumb">
-              </a>
+            <div class="card newsletter-card newsletter-card--text">
               <div class="newsletter-card-body">
                 <h3 class="card-title">${item.title}</h3>
-                <p class="newsletter-date">${item.date}</p>
-                <a class="newsletter-pdf-link" href="${pdf}" download>PDF 다운로드</a>
+                <a class="newsletter-pdf-link" href="${href}" ${linkAttrs}>${linkLabel}</a>
               </div>
             </div>
           `;

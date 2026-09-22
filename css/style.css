@@ -343,3 +343,11 @@ main > #home.hero {
   font-size: 14px;
   flex-shrink: 0;
 }
+/* 목록 들여쓰기 */
+ul, ol {
+  padding-left: 1.5em;
+}
+li > ul {
+  padding-left: 1.5em;
+  margin-top: 8px;
+}
